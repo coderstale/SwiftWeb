@@ -3,3 +3,4 @@ Jinja2==3.0.1
 SQLAlchemy==1.4.22
 click==8.0.1
 passlib==1.7.4
+flake8
