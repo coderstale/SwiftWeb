@@ -15,6 +15,7 @@ import os
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
+
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.handle_request()
@@ -27,13 +28,13 @@ class RequestHandler(BaseHTTPRequestHandler):
             logger.info(f"Handling request for path: {self.path}")
             self.path = unquote(self.path)
 
-            if self.path.startswith('/static/'):
+            if self.path.startswith("/static/"):
                 self.serve_static_file()
-            elif self.path.startswith('/'):
-                self.serve_template_file(self.path[1:])   
+            elif self.path.startswith("/"):
+                self.serve_template_file(self.path[1:])
             else:
-                content_length = int(self.headers.get('Content-Length', 0))
-                body = self.rfile.read(content_length) if content_length > 0 else b''
+                content_length = int(self.headers.get("Content-Length", 0))
+                body = self.rfile.read(content_length) if content_length > 0 else b""
                 request = Request(self.command, self.path, self.headers, body)
 
                 request = middleware_manager.process_request(request)
@@ -56,13 +57,17 @@ class RequestHandler(BaseHTTPRequestHandler):
                     response = middleware_manager.process_response(request, response)
                     logger.info(f"Sending response: {response.body[:100]}")
                     self.send_response(response.status)
-                    self.send_header('Content-Type', 'text/html; charset=utf-8')
-                    self.send_header('Content-Length', str(len(response.body.encode('utf-8'))))
+                    self.send_header("Content-Type", "text/html; charset=utf-8")
+                    self.send_header(
+                        "Content-Length", str(len(response.body.encode("utf-8")))
+                    )
                     for key, value in response.headers.items():
                         self.send_header(key, value)
-                    self.send_header('Set-Cookie', f'session_id={request.session_id}; Path=/')
+                    self.send_header(
+                        "Set-Cookie", f"session_id={request.session_id}; Path=/"
+                    )
                     self.end_headers()
-                    self.wfile.write(response.body.encode('utf-8'))
+                    self.wfile.write(response.body.encode("utf-8"))
                 else:
                     self.send_response(404)
                     self.end_headers()
@@ -77,8 +82,8 @@ class RequestHandler(BaseHTTPRequestHandler):
 
     def handle_session(self, request):
         try:
-            cookie = SimpleCookie(self.headers.get('Cookie'))
-            session_id = cookie.get('session_id')
+            cookie = SimpleCookie(self.headers.get("Cookie"))
+            session_id = cookie.get("session_id")
             if session_id is None or session_id.value not in session_manager.sessions:
                 session_id = session_manager.create_session()
                 request.session_id = session_id
@@ -94,14 +99,16 @@ class RequestHandler(BaseHTTPRequestHandler):
     def serve_static_file(self):
         try:
             logger.info(f"Serving static file for path: {self.path}")
-            static_file_path = os.path.join(os.path.dirname(__file__), '..', 'static', self.path[8:])
+            static_file_path = os.path.join(
+                os.path.dirname(__file__), "..", "static", self.path[8:]
+            )
             if os.path.exists(static_file_path) and os.path.isfile(static_file_path):
                 self.send_response(200)
                 mime_type = self.guess_type(static_file_path)
-                self.send_header('Content-Type', mime_type)
-                with open(static_file_path, 'rb') as file:
+                self.send_header("Content-Type", mime_type)
+                with open(static_file_path, "rb") as file:
                     static_content = file.read()
-                    self.send_header('Content-Length', str(len(static_content)))
+                    self.send_header("Content-Length", str(len(static_content)))
                     self.end_headers()
                     self.wfile.write(static_content)
             else:
@@ -117,14 +124,18 @@ class RequestHandler(BaseHTTPRequestHandler):
     def serve_template_file(self, template_name):
         try:
             logger.info(f"Serving template file for path: {self.path}")
-            template_file_path = os.path.join(os.path.dirname(__file__), '..', 'templates', template_name)
-            if os.path.exists(template_file_path) and os.path.isfile(template_file_path):
+            template_file_path = os.path.join(
+                os.path.dirname(__file__), "..", "templates", template_name
+            )
+            if os.path.exists(template_file_path) and os.path.isfile(
+                template_file_path
+            ):
                 self.send_response(200)
                 mime_type = self.guess_type(template_file_path)
-                self.send_header('Content-Type', mime_type)
-                with open(template_file_path, 'rb') as file:
+                self.send_header("Content-Type", mime_type)
+                with open(template_file_path, "rb") as file:
                     template_content = file.read()
-                    self.send_header('Content-Length', str(len(template_content)))
+                    self.send_header("Content-Length", str(len(template_content)))
                     self.end_headers()
                     self.wfile.write(template_content)
             else:
@@ -140,19 +151,21 @@ class RequestHandler(BaseHTTPRequestHandler):
     def guess_type(self, path):
         ext = os.path.splitext(path)[1]
         return {
-            '.html': 'text/html',
-            '.css': 'text/css',
-            '.js': 'application/javascript',
-            '.png': 'image/png',
-            '.jpg': 'image/jpeg',
-            '.gif': 'image/gif'
-        }.get(ext, 'application/octet-stream')
+            ".html": "text/html",
+            ".css": "text/css",
+            ".js": "application/javascript",
+            ".png": "image/png",
+            ".jpg": "image/jpeg",
+            ".gif": "image/gif",
+        }.get(ext, "application/octet-stream")
+
 
 def run(server_class=HTTPServer, handler_class=RequestHandler, port=8000):
-    server_address = ('', port)
+    server_address = ("", port)
     httpd = server_class(server_address, handler_class)
-    logger.info(f'Starting httpd server on port {port}')
+    logger.info(f"Starting httpd server on port {port}")
     httpd.serve_forever()
+
 
 if __name__ == "__main__":
     run()

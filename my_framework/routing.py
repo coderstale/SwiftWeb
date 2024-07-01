@@ -4,31 +4,38 @@ from my_framework.template_engine import render_template
 
 routes = {}
 
+
 def route(path):
     def wrapper(func):
         routes[path] = func
         return func
+
     return wrapper
+
 
 def get_handler(path):
     return routes.get(path, None)
 
-@route('/')
+
+@route("/")
 def home(request):
-    context = {'title': 'Home'}
-    return Response(body=render_template('index.html', context))
+    context = {"title": "Home"}
+    return Response(body=render_template("index.html", context))
 
-@route('/login')
+
+@route("/login")
 def login(request):
-    context = {'title': 'Login'}
-    return Response(body=render_template('login.html', context))
+    context = {"title": "Login"}
+    return Response(body=render_template("login.html", context))
 
-@route('/dashboard')
+
+@route("/dashboard")
 @login_required
 def dashboard(request):
-    return Response(body=f'Welcome {request.user.username} to your dashboard!')
+    return Response(body=f"Welcome {request.user.username} to your dashboard!")
 
-@route('/admin')
-@role_required('admin')
+
+@route("/admin")
+@role_required("admin")
 def admin_dashboard(request):
-    return Response(body=f'Welcome {request.user.username} to the admin dashboard!')
+    return Response(body=f"Welcome {request.user.username} to the admin dashboard!")

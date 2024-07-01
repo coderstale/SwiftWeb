@@ -9,12 +9,11 @@ def cli():
 
 
 @cli.command()
-@click.option('--port', default=8000, help='Port to run the server on.')
+@click.option("--port", default=8000, help="Port to run the server on.")
 def runserver(port):
     logger.info(f"Starting server on port {port}")
     run_server(port=port)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     cli()
-

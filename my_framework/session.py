@@ -1,5 +1,6 @@
 import uuid
 
+
 class SessionManager:
     def __init__(self):
         self.sessions = {}
@@ -11,5 +12,6 @@ class SessionManager:
 
     def get_session(self, session_id):
         return self.sessions.get(session_id, {})
+
 
 session_manager = SessionManager()

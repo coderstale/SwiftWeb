@@ -17,4 +17,5 @@ class MiddlewareManager:
             response = middleware.process_response(request, response)
         return response
 
+
 middleware_manager = MiddlewareManager()
