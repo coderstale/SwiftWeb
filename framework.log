@@ -1,0 +1,103 @@
+2024-07-01 17:30:13,840 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 17:30:18,424 - my_framework - INFO - Handling request for path: /
+2024-07-01 17:30:18,425 - my_framework - INFO - New session created: 2367ae24-35a1-4c95-9f41-d8672c1549ed
+2024-07-01 17:30:18,426 - my_framework - INFO - Session ID: 2367ae24-35a1-4c95-9f41-d8672c1549ed
+2024-07-01 17:30:18,431 - my_framework - INFO - Sending response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content
+2024-07-01 17:30:18,461 - my_framework - INFO - Handling request for path: /static/styles.css
+2024-07-01 17:30:18,461 - my_framework - INFO - Serving static file for path: /static/styles.css
+2024-07-01 17:30:18,463 - my_framework - INFO - Handling request for path: /static/script.js
+2024-07-01 17:30:18,465 - my_framework - INFO - Serving static file for path: /static/script.js
+2024-07-01 17:32:55,247 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 17:32:57,078 - my_framework - INFO - Handling request for path: /
+2024-07-01 17:32:57,086 - my_framework - INFO - New session created: dc626b80-f3cc-41fb-81b4-d437eb35c164
+2024-07-01 17:32:57,086 - my_framework - INFO - Session ID: dc626b80-f3cc-41fb-81b4-d437eb35c164
+2024-07-01 17:32:57,091 - my_framework - INFO - Sending response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content
+2024-07-01 17:32:57,110 - my_framework - INFO - Handling request for path: /static/styles.css
+2024-07-01 17:32:57,111 - my_framework - INFO - Serving static file for path: /static/styles.css
+2024-07-01 17:32:57,120 - my_framework - INFO - Handling request for path: /static/script.js
+2024-07-01 17:32:57,122 - my_framework - INFO - Serving static file for path: /static/script.js
+2024-07-01 17:36:24,782 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 17:36:45,874 - my_framework - INFO - Handling request for path: /
+2024-07-01 17:36:45,874 - my_framework - INFO - New session created: 835f29d6-8dc4-4b38-92df-47f76dd651c1
+2024-07-01 17:36:45,875 - my_framework - INFO - Session ID: 835f29d6-8dc4-4b38-92df-47f76dd651c1
+2024-07-01 17:36:55,136 - my_framework - INFO - Creating all database tables...
+2024-07-01 17:36:55,138 - my_framework - INFO - All tables created.
+2024-07-01 17:37:05,543 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 17:37:07,941 - my_framework - INFO - Handling request for path: /
+2024-07-01 17:37:07,942 - my_framework - INFO - New session created: 3636ec8d-8753-450a-a5a5-ce7028da5d70
+2024-07-01 17:37:07,942 - my_framework - INFO - Session ID: 3636ec8d-8753-450a-a5a5-ce7028da5d70
+2024-07-01 17:37:08,833 - my_framework - INFO - Handling request for path: /
+2024-07-01 17:37:08,833 - my_framework - INFO - New session created: 8213473c-fe63-4bc7-84df-e4658919391d
+2024-07-01 17:37:08,834 - my_framework - INFO - Session ID: 8213473c-fe63-4bc7-84df-e4658919391d
+2024-07-01 17:39:27,058 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 17:39:29,092 - my_framework - INFO - Handling request for path: /
+2024-07-01 17:39:29,093 - my_framework - INFO - New session created: 40f0ee5e-a6f9-4b9d-a3bb-1528ef7518bc
+2024-07-01 17:39:29,094 - my_framework - INFO - Session ID: 40f0ee5e-a6f9-4b9d-a3bb-1528ef7518bc
+2024-07-01 17:39:29,101 - my_framework - INFO - Sending response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content
+2024-07-01 17:39:29,137 - my_framework - INFO - Handling request for path: /static/styles.css
+2024-07-01 17:39:29,139 - my_framework - INFO - Serving static file for path: /static/styles.css
+2024-07-01 17:39:29,147 - my_framework - INFO - Handling request for path: /static/script.js
+2024-07-01 17:39:29,148 - my_framework - INFO - Serving static file for path: /static/script.js
+2024-07-01 17:43:01,591 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 17:43:03,689 - my_framework - INFO - Handling request for path: /
+2024-07-01 17:43:03,692 - my_framework - INFO - New session created: cf7c9437-2e44-41a0-b9ad-5c103c0d6d75
+2024-07-01 17:43:03,694 - my_framework - INFO - Session ID: cf7c9437-2e44-41a0-b9ad-5c103c0d6d75
+2024-07-01 17:43:03,700 - my_framework - INFO - Sending response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content
+2024-07-01 17:43:03,744 - my_framework - INFO - Handling request for path: /static/styles.css
+2024-07-01 17:43:03,745 - my_framework - INFO - Serving static file for path: /static/styles.css
+2024-07-01 17:43:03,754 - my_framework - INFO - Handling request for path: /static/script.js
+2024-07-01 17:43:03,755 - my_framework - INFO - Serving static file for path: /static/script.js
+2024-07-01 17:58:28,503 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 17:58:30,707 - my_framework - INFO - Handling request for path: /
+2024-07-01 17:58:30,707 - my_framework - INFO - New session created: d74ce91f-e86c-4420-a120-96ace8f8c02f
+2024-07-01 17:58:30,708 - my_framework - INFO - Session ID: d74ce91f-e86c-4420-a120-96ace8f8c02f
+2024-07-01 18:06:09,885 - my_framework - INFO - Starting server on port 8000
+2024-07-01 18:06:09,899 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 18:06:13,624 - my_framework - INFO - Handling request for path: /
+2024-07-01 18:06:13,625 - my_framework - INFO - New session created: ce818a38-1c8a-4a47-9529-b14f831c16a9
+2024-07-01 18:06:13,626 - my_framework - INFO - Session ID: ce818a38-1c8a-4a47-9529-b14f831c16a9
+2024-07-01 18:06:13,627 - my_framework - INFO - Sending response: Hello, this is the home page!
+2024-07-01 18:06:22,066 - my_framework - INFO - Handling request for path: /login.html
+2024-07-01 18:06:22,068 - my_framework - INFO - Existing session retrieved: ce818a38-1c8a-4a47-9529-b14f831c16a9
+2024-07-01 18:06:22,068 - my_framework - INFO - Session ID: ce818a38-1c8a-4a47-9529-b14f831c16a9
+2024-07-01 18:11:02,596 - my_framework - INFO - Starting server on port 8000
+2024-07-01 18:11:02,611 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 18:11:11,068 - my_framework - INFO - Handling request for path: /login.html
+2024-07-01 18:11:11,070 - my_framework - INFO - Serving login page for path: /login.html
+2024-07-01 18:11:15,512 - my_framework - INFO - Handling request for path: /index.html
+2024-07-01 18:11:15,513 - my_framework - INFO - New session created: 92754de9-1bf7-41ac-8bb6-2c99fe823ecd
+2024-07-01 18:11:15,513 - my_framework - INFO - Session ID: 92754de9-1bf7-41ac-8bb6-2c99fe823ecd
+2024-07-01 20:24:46,833 - my_framework - INFO - Starting server on port 8000
+2024-07-01 20:24:46,857 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 20:24:49,719 - my_framework - INFO - Handling request for path: /index.html
+2024-07-01 20:24:49,720 - my_framework - INFO - New session created: 017acb5e-ec3c-4af6-8c42-3fd68ee3e034
+2024-07-01 20:24:49,720 - my_framework - INFO - Session ID: 017acb5e-ec3c-4af6-8c42-3fd68ee3e034
+2024-07-01 20:24:56,272 - my_framework - INFO - Handling request for path: /login.html
+2024-07-01 20:24:56,273 - my_framework - INFO - New session created: 1648b019-bdba-4eef-9aca-b821d2c723bd
+2024-07-01 20:24:56,273 - my_framework - INFO - Session ID: 1648b019-bdba-4eef-9aca-b821d2c723bd
+2024-07-01 20:32:47,455 - my_framework - INFO - Starting server on port 8000
+2024-07-01 20:32:47,476 - my_framework - INFO - Starting httpd server on port 8000
+2024-07-01 20:32:52,191 - my_framework - INFO - Handling request for path: /login.html
+2024-07-01 20:32:52,200 - my_framework - INFO - Serving template file for path: /login.html
+2024-07-01 20:32:56,216 - my_framework - INFO - Handling request for path: /index.html
+2024-07-01 20:32:56,217 - my_framework - INFO - Serving template file for path: /index.html
+2024-07-01 20:32:56,260 - my_framework - INFO - Handling request for path: /static/styles.css
+2024-07-01 20:32:56,270 - my_framework - INFO - Serving static file for path: /static/styles.css
+2024-07-01 20:32:56,280 - my_framework - INFO - Handling request for path: /static/script.js
+2024-07-01 20:32:56,281 - my_framework - INFO - Serving static file for path: /static/script.js
