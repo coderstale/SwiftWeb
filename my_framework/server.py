@@ -1,15 +1,13 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from .request import Request
 from urllib.parse import unquote
 from http.cookies import SimpleCookie
 from sqlalchemy.orm import sessionmaker
-from my_framework.db import engine, Base
+from my_framework.db import engine
 from my_framework.routing import get_handler
 from my_framework.request import Request
 from my_framework.response import Response
 from my_framework.middleware import middleware_manager
 from my_framework.session import session_manager
-from my_framework.template_engine import render_template
 from logging_config import logger
 import os
 
